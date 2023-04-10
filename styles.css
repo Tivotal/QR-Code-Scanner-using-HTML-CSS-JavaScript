@@ -1,0 +1,154 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e3f2fd;
+}
+
+.wrapper {
+  height: 270px;
+  width: 420px;
+  background: #0b85ff;
+  border-radius: 7px;
+  padding: 30px 30px 35px;
+  transition: all 0.3s linear;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper.active {
+  height: 525px;
+}
+
+.wrapper form {
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 7px;
+  transition: all 0.3s linear;
+  user-select: none;
+  cursor: pointer;
+}
+
+.wrapper.active form {
+  height: 225px;
+  pointer-events: none;
+}
+
+.wrapper form img {
+  max-width: 148px;
+  display: none;
+}
+
+.wrapper.active form img {
+  display: block;
+}
+
+.wrapper.active form .content {
+  display: none;
+}
+
+.wrapper form .content i {
+  color: #0b85ff;
+  font-size: 55px;
+}
+
+.wrapper form .content p {
+  color: #0b85ff;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.wrapper .details {
+  margin-top: 20px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper.active .details {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.3s linear;
+}
+
+.wrapper .details textarea {
+  width: 100%;
+  height: 128px;
+  outline: none;
+  border: none;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  resize: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+.wrapper .details textarea::-webkit-scrollbar {
+  width: 0px;
+}
+
+.wrapper .details textarea:hover::-webkit-scrollbar {
+  width: 5px;
+}
+
+.wrapper .details textarea:hover::-webkit-scrollbar-track {
+  background: none;
+}
+
+.wrapper .details textarea:hover::-webkit-scrollbar-thumb {
+  background: #0b85ff;
+  border-radius: 5px;
+}
+
+.wrapper .details .buttons {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper .details .buttons button {
+  height: 55px;
+  width: calc(100% / 2 - 10px);
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #0b85ff;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+
+.wrapper .details .buttons button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    padding: 25px;
+    height: 260px;
+  }
+
+  .wrapper.active {
+    height: 520px;
+  }
+}
